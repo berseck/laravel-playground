@@ -1,0 +1,33 @@
+---
+ip: "10.10.10.2"
+memory: 2048
+cpus: 2
+hostname: blockchain.test
+name: Blockchanin Test
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "~/Sites/blockchain-test"
+      to: "/home/vagrant/blockchain-test"
+
+sites:
+    - map: blockchain.test
+      to: "/home/vagrant/blockchain-test/public"
+      name: "Blockchain Test"
+      folder: "/home/vagrant/blockchain-test"
+      php: "7.1"
+
+databases:
+    - blockchain
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp

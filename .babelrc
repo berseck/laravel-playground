@@ -1,0 +1,10 @@
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "browsers": ["safari >= 9"]
+            }
+        }]
+    ],
+    "plugins": ["syntax-dynamic-import"]
+}
